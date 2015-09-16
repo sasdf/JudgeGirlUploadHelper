@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 scriptdir=${0%/*}
 ck=$scriptdir/judgeGirlCookies
 cidfile=$scriptdir/judgeGirlCid

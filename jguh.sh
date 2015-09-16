@@ -5,9 +5,9 @@ cidfile=$scriptdir/judgeGirlCid
 pidfile=$scriptdir/judgeGirlPid
 
 function user(){
-    local HTML=$(curl -s -b "$ck" "http://judgegirl.csie.org/" | grep '/user')
+    local HTML=$(curl -s -b "$ck" "http://judgegirl.csie.org/" | grep 'fa-user')
     local usernamee=${HTML#*</i>\ }
-    local username=${usernamee%</a>*}
+    local username=${usernamee%\ <i*}
     echo "$username"
 }
 

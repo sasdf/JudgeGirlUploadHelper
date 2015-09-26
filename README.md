@@ -27,7 +27,7 @@ Append following line to ~/.vimrc
 - `filetype plugin on`
 
 move c_judge_girl.vim to ~/.vim/ftplugin/c/
-- change the variable g:JudgeGirlUploadHelperDir to the directory the scripts located.
+- change the variable `g:JudgeGirlUploadHelperDir` to the directory the scripts located.
 
 Usage
 - Press F7 to show the list of all problems. 

@@ -4,14 +4,13 @@ Command Line script for compiling, running, and uploading code to judgegirl serv
 ## Requirement
 - curl
 - Shell (eg. bash)
+- perl
 
 ## Usage
-- jguh.sh code.c
-
-## Installation
-- Just place the script wherever you want, and don't forget to add the execute permission flag.
-
-- Note. After Execution, the script will create 3 files(judgeGirlCookies, judgeGirlCid, judgeGirlPid) at same directory of the script to store userdata. It is highly recommend to make a new directory and move the script into it.
+- problem.sh cid pid   # print problem's description.
+- list.sh 0            # Show all problems' list.
+- list.sh 1            # Show unpassed problems' list.
+- submit.sh code.c     # Compile, test, and Submit your code.
 
 ## CID? PID?
 - The URL of judgegirl problem's page is: http://judgegirl.csie.org/problem/(cid)/(pid)
@@ -19,18 +18,18 @@ Command Line script for compiling, running, and uploading code to judgegirl serv
 - For example, The URL of first problem on judgegirl is "http://judgegirl.csie.org/problem/0/3".It means the cid of this problem is 0, and the pid is 3.
 
 ## Logout
-- Delete the file "judgeGirlCookies" at same directory of the script.
+- Delete the file "judgeGirlCookies" at Userdata directory.
 
 ## Vim Integration
-###~/.vimrc (Create one if not exists)
+Append following line to ~/.vimrc
 - filetype plugin on
 
-###~/.vim/ftplugin/c/c_judge_girl.vim (Create one if not exists)
-- nnoremap \<buffer\> key :w\<CR\>:! DirToScript/jguh.sh %\<CR\>
+move c_judge_girl.vim to ~/.vim/ftplugin/c/
+- change the variable g:JudgeGirlUploadHelperDir to the directory the scripts located.
 
-For example:
-- nnoremap \<buffer\> \<F9\> :w\<CR\>:! ~/JudgeGirlUploadHelper/jguh.sh %\<CR\>
-
-Press the key you define(which is F9 in above example) in normal mode of vim and enjoy it~~
+Usage
+- Press F7 to show the list of all problems. 
+- Press F8 to show the list of unpassed problems. 
+- Press F9 to test & submit your code.
 
 ## Sublime Integration

@@ -7,10 +7,12 @@ Command Line script for compiling, running, and uploading code to judgegirl serv
 - perl
 
 ## Usage
-- problem.sh cid pid   # print problem's description.
-- list.sh 0            # Show all problems' list.
-- list.sh 1            # Show unpassed problems' list.
-- submit.sh code.c     # Compile, test, and Submit your code.
+```
+problem.sh cid pid   # print problem's description.
+list.sh 0            # Show all problems' list.
+list.sh 1            # Show unpassed problems' list.
+submit.sh code.c     # Compile, test, and Submit your code.
+```
 
 ## CID? PID?
 - The URL of judgegirl problem's page is: http://judgegirl.csie.org/problem/(cid)/(pid)
@@ -22,7 +24,7 @@ Command Line script for compiling, running, and uploading code to judgegirl serv
 
 ## Vim Integration
 Append following line to ~/.vimrc
-- filetype plugin on
+- `filetype plugin on`
 
 move c_judge_girl.vim to ~/.vim/ftplugin/c/
 - change the variable g:JudgeGirlUploadHelperDir to the directory the scripts located.

@@ -46,7 +46,9 @@ if [ "$#" -lt 2 ]; then
     fi
 else
     cid="$1"
+    echo "$cid" > $cidfile
     pid="$2"
+    echo "$pid" > $pidfile
 fi
 #if [ ! -f "$scriptdir/$cid-$pid" ]; then
 if [ "1"=="1" ]; then

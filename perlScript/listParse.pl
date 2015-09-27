@@ -10,7 +10,7 @@ sub listProblems{
     $HTML = join '', split /\n/, $HTML;
     @problemsRaw = ($HTML =~ m/<tr.*?<a[^>]*href="\/*problem\/[0-9]*\/[0-9]*"[^>]*>.*?<\/a>.*?<\/tr>/sg);
     for my $i (@problemsRaw){
-        $pass = ($HTML =~ m/fa\-check/g)?"O":"X";
+        $pass = ($i =~ m/fa\-check/g)?"O":"X";
         if(!($ARGV[0]) || $pass eq "X" ){
             $i =~ m/<a[^>]*href="\/*problem\/([0-9]*)\/([0-9]*)"[^>]*>(.*?)<\/a>/s;
             $cid = $1;
